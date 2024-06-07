@@ -20,6 +20,7 @@ import { HttpModule } from '@nestjs/axios';
         },
       ],
       uri: process.env.RABBITMQ_URI,
+      connectionInitOptions: { wait: false },
     }),
     BullModule.forRoot({
       redis: {
